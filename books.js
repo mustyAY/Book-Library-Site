@@ -8,7 +8,7 @@ async function renderBooks(filter){
   if (!books){
     books = await getBooks();
   }
-  
+
   booksWrapper.classList.remove('books__loading')
 
   if (filter === 'LOW_TO_HIGH'){
@@ -65,7 +65,6 @@ function filterBooks(event){
 setTimeout(() => {
   renderBooks();
 });
-
 
 
 // FAKE DATA

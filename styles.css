@@ -396,6 +396,10 @@ BOOKS PAGE
     padding: 0 24px;
 }
 
+.books__header--title{
+    margin: 0;
+}
+
 .books__loading{
     display: flex;
     align-items: center;
