@@ -1,4 +1,4 @@
-let books;
+let books = false;
 
 async function renderBooks(filter){
   const booksWrapper = document.querySelector('.books');
