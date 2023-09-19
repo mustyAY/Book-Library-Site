@@ -1,15 +1,13 @@
-// let books;
+let books;
 
 async function renderBooks(filter){
   const booksWrapper = document.querySelector('.books');
 
   booksWrapper.classList += ' books__loading';
 
-  books = await getBooks();
-
-  // if (!books){
-  //   books = await getBooks();
-  // }
+  if (!books){
+    books = await getBooks();
+  }
 
   booksWrapper.classList.remove('books__loading');
 
@@ -23,7 +21,7 @@ async function renderBooks(filter){
     books.sort((a, b) => b.rating - a.rating);
   }
   else {
-    books
+    books;
   }
 
 
