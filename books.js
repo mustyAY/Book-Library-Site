@@ -1,16 +1,15 @@
-let books;
+// let books;
 
 async function renderBooks(filter){
   const booksWrapper = document.querySelector('.books');
 
   booksWrapper.classList += ' books__loading';
 
-  if (!books){
-    books = await getBooks();
-  }
-  else {
-    getBooks();
-  }
+  books = await getBooks();
+
+  // if (!books){
+  //   books = await getBooks();
+  // }
 
   booksWrapper.classList.remove('books__loading');
 
