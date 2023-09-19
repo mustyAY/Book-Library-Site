@@ -8,6 +8,9 @@ async function renderBooks(filter){
   if (!books){
     books = await getBooks();
   }
+  else {
+    getBooks();
+  }
 
   booksWrapper.classList.remove('books__loading');
 
