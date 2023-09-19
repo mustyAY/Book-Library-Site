@@ -6,6 +6,7 @@ async function renderBooks(filter){
   booksWrapper.classList += ' books__loading';
 
   if (!books){
+    books = true;
     books = await getBooks();
   }
 
