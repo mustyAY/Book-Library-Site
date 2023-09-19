@@ -11,8 +11,6 @@ async function renderBooks(filter){
 
   booksWrapper.classList.remove('books__loading');
 
-  books;
-
   if (filter === 'LOW_TO_HIGH'){
     books.sort((a, b) => (a.salePrice || a.originalPrice) - (b.salePrice || b.originalPrice));
   }
@@ -21,6 +19,9 @@ async function renderBooks(filter){
   }
   else if (filter === 'RATING'){
     books.sort((a, b) => b.rating - a.rating);
+  }
+  else {
+    books;
   }
 
 
@@ -65,7 +66,7 @@ function filterBooks(event){
 }
 
 setTimeout(() => {
-  renderBooks(filter);
+  renderBooks();
 });
 
 
