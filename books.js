@@ -65,7 +65,7 @@ function filterBooks(event){
 }
 
 setTimeout(() => {
-  renderBooks();
+  renderBooks(filter);
 });
 
 
